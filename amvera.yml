@@ -2,11 +2,11 @@ meta:
   environment: ruby
   toolchain:
     name: bundle
-    version: "3.0"
+    version: "3.2"
 build:
   image: null
 run:
   image: null
-  mainScript: null
+  mainScript: "app.rb"       # Указывает главный файл приложения
   persistenceMount: /data
-  containerPort: "80"
+  containerPort: "9292"       # Порт контейнера. Должен совпадать с настройкой в app.rb
